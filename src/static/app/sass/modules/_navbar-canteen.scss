@@ -1,0 +1,36 @@
+.navbar-canteen {
+
+	background-color: #fff;
+	text-align: center;
+	border: none;
+
+	padding-top: 15px;
+
+	.nav-canteen {
+		margin-top: 10px !important;
+		display: inline-block;
+	}
+
+	.navbar-brand {
+		float: none;
+		> img {
+			display: inline-block;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		text-align: left;
+
+		.nav-canteen {
+			margin-top: 40px !important;
+			display: block;
+		}
+
+		.navbar-brand {
+			float: left;
+		}
+
+	}
+
+}

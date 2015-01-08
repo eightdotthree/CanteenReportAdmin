@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+
+        <title>Emergency Disaster Services - Canteen Report</title>
+
+        <!-- build:css(.tmp) css/main.css -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- endbuild -->
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-canteen">
+
+            <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="/">
+                        <img src="/img/logo-emergency-disaster-services.gif" alt="Brand" />
+                    </a>
+
+                </div>
+
+                <ul class="nav nav-pills nav-canteen navbar-right">
+                    <li role="presentation" class="active">
+                        <a href="#">Reports</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#">Summary</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <section>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Canteen Report</h1>
+                        <p>100 Results</p>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-md-3">
+
+                        <div class="sort-form">
+
+                            <h2 id="js-sort-button">Filter</h2>
+
+                            <div id="js-sort-container" class="sort-form-container">
+
+                                <form>
+
+                                    <div class="form-group">
+                                        <label for="start-date">Start Date</label>
+                                        <input id="start-date" class="form-control" name="start-date" type="date" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="end-date">End Date</label>
+                                        <input id="end-date" class="form-control" name="end-date" type="date" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="unit-number">Unit #</label>
+                                        <select id="unit-number" class="form-control" name="unit-number">
+                                            <option>001</option>
+                                            <option>002</option>
+                                            <option>003</option>
+                                            <option>004</option>
+                                            <option>005</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Type of Call</label>
+                                        <p><em>Select all that apply</em></p>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-fire" name="incident-type-fire" />
+                                            </span>
+                                            <label for="incident-type-fire" class="form-control">Fire/ Alarm/ Companies</label>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-hazmat" name="incident-type-hazmat" />
+                                            </span>
+                                            <label for="incident-type-hazmat" class="form-control">Hazmat</label>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-maintenance" name="incident-type-maintenance" />
+                                            </span>
+                                            <label for="incident-type-maintenance" class="form-control">Maintenance</label>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-flood" name="incident-type-flood" />
+                                            </span>
+                                            <label for="incident-type-flood" class="form-control">Flood</label>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-special-event" name="incident-type-special-event" />
+                                            </span>
+                                            <label for="incident-type-special-event" class="form-control">Special Event</label>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" id="incident-type-special-other" name="incident-type-special-other" />
+                                            </span>
+                                            <label for="incident-type-special-other" class="form-control">Other</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="zipcode">Zip Code</label>
+                                        <input id="zipcode" class="form-control" name="zipcode" type="text" />
+                                    </div>
+
+                                    <input class="btn btn-default" type="submit" value="Submit" />
+                                    <input class="btn btn-link" type="reset" value="Reset" />
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="report-data-container col-sm-8 col-md-9">
+
+                        <div class="table-responsive">
+
+                            <table class="table table-stripped table-hover">
+
+                                <thead>
+                                    <th>Date</th>
+                                    <th>Unit #</th>
+                                    <th>Type of Call</th>
+                                    <th>Zip Code</th>
+                                </thead>
+
+                                <tr>
+                                    <td>01/08/2015</td>
+                                    <td>001</td>
+                                    <td>Fire/ Alarm/ Companies</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/01/2015</td>
+                                    <td>004</td>
+                                    <td>Hazmat</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/08/2015</td>
+                                    <td>001</td>
+                                    <td>Maintenance</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/08/2015</td>
+                                    <td>001</td>
+                                    <td>Maintenance</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/08/2015</td>
+                                    <td>001</td>
+                                    <td>Flood</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/08/2015</td>
+                                    <td>001</td>
+                                    <td>Special Event</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>07/30/2014</td>
+                                    <td>001</td>
+                                    <td>Fire/ Alarm/ Companies</td>
+                                    <td>15222</td>
+                                </tr>
+                                <tr>
+                                    <td>01/01/2014</td>
+                                    <td>001</td>
+                                    <td>Other</td>
+                                    <td>15222</td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- build:js js/main.css -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/mediaCheck/js/mediaCheck.js"></script>
+        <script src="js/canteenreport.main.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>
