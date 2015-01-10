@@ -3390,6 +3390,13 @@ body { background-color: #fff; }
   /* line 30, ../sass/modules/_navbar-canteen.scss */
   .navbar-canteen .navbar-brand { float: left; } }
 
+/* line 1, ../sass/modules/_navbar-login.scss */
+.navbar-login { text-align: center; }
+/* line 5, ../sass/modules/_navbar-login.scss */
+.navbar-login .navbar-brand { float: none; }
+/* line 9, ../sass/modules/_navbar-login.scss */
+.navbar-login .navbar-header { float: none; }
+
 /* line 3, ../sass/modules/_report-table.scss */
 .report-table th { cursor: pointer; }
 /* line 7, ../sass/modules/_report-table.scss */
@@ -3401,15 +3408,20 @@ body { background-color: #fff; }
 /* line 22, ../sass/modules/_report-table.scss */
 .report-table th:hover .glyphicon-chevron:before, .report-table th.sorted .glyphicon-chevron:before { content: '\e114'; }
 
-/* line 1, ../sass/modules/_sort-form.scss */
-.sort-form { background-color: #f9f9f9; border: 1px solid #dddddd; margin-bottom: 10px; }
-/* line 7, ../sass/modules/_sort-form.scss */
-.sort-form h2 { background-color: #ecebe7; font-size: 22px; border-bottom: 1px solid #dddddd; padding: 5px 15px 5px 15px; margin: 0; cursor: pointer; }
-/* line 16, ../sass/modules/_sort-form.scss */
-.sort-form .sort-form-container { padding: 15px 15px 25px 15px; display: none; }
-/* line 21, ../sass/modules/_sort-form.scss */
-.sort-form .input-group { margin-top: 5px; }
-@media (min-width: 768px) { /* line 27, ../sass/modules/_sort-form.scss */
-  .sort-form h2 { cursor: default; }
-  /* line 31, ../sass/modules/_sort-form.scss */
-  .sort-form .sort-form-container { display: block !important; } }
+/* line 1, ../sass/modules/_form-sort.scss */
+.form-sort { background-color: #f9f9f9; border: 1px solid #dddddd; margin-bottom: 10px; }
+/* line 7, ../sass/modules/_form-sort.scss */
+.form-sort h2 { background-color: #ecebe7; font-size: 22px; border-bottom: 1px solid #dddddd; padding: 5px 15px 5px 15px; margin: 0; cursor: pointer; }
+/* line 16, ../sass/modules/_form-sort.scss */
+.form-sort .sort-form-container { padding: 15px 15px 25px 15px; display: none; }
+/* line 21, ../sass/modules/_form-sort.scss */
+.form-sort .input-group { margin-top: 5px; }
+@media (min-width: 768px) { /* line 27, ../sass/modules/_form-sort.scss */
+  .form-sort h2 { cursor: default; }
+  /* line 31, ../sass/modules/_form-sort.scss */
+  .form-sort .sort-form-container { display: block !important; } }
+
+/* line 1, ../sass/modules/_form-signin.scss */
+.form-signin { max-width: 320px; margin: 0 auto; }
+/* line 5, ../sass/modules/_form-signin.scss */
+.form-signin .form-group { margin-bottom: 5px; }
