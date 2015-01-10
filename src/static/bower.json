@@ -5,7 +5,8 @@
     "bootstrap-sass-official": "~3.3.1"
   },
   "devDependencies": {
-    "mediaCheck": "~0.4.5"
+    "mediaCheck": "~0.4.5",
+    "bootstrap-sortable": "~1.10.0"
   },
   "homepage": "https://github.com/tyllyn/CanteenReport",
   "authors": [
