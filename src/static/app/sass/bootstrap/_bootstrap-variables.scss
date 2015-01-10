@@ -19,7 +19,7 @@ $gray-light:             lighten($birch, 46.7%) !default;
 $gray-lighter:           lighten($birch, 75.0%) !default;
 
 //$brand-primary:         #428bca !default;
-$brand-primary:         $primaryRed !default;
+$brand-primary:         $primary-blue !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -117,7 +117,7 @@ $border-radius-small:       3px !default;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary !default;
+$component-active-bg:       $primaryRed !default;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px !default;
