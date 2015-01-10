@@ -3378,17 +3378,19 @@ body { background-color: #fff; }
 /* line 1, ../sass/modules/_navbar-canteen.scss */
 .navbar-canteen { background-color: #fff; text-align: center; border: none; padding-top: 15px; }
 /* line 9, ../sass/modules/_navbar-canteen.scss */
-.navbar-canteen .nav-canteen { margin-top: 10px !important; display: inline-block; }
-/* line 14, ../sass/modules/_navbar-canteen.scss */
+.navbar-canteen .nav-canteen { margin-top: 10px !important; margin-right: 0; display: inline-block; }
+/* line 15, ../sass/modules/_navbar-canteen.scss */
 .navbar-canteen .navbar-brand { float: none; }
-/* line 16, ../sass/modules/_navbar-canteen.scss */
+/* line 17, ../sass/modules/_navbar-canteen.scss */
 .navbar-canteen .navbar-brand > img { display: inline-block; }
 @media (min-width: 768px) { /* line 1, ../sass/modules/_navbar-canteen.scss */
   .navbar-canteen { text-align: left; }
-  /* line 25, ../sass/modules/_navbar-canteen.scss */
+  /* line 26, ../sass/modules/_navbar-canteen.scss */
   .navbar-canteen .nav-canteen { margin-top: 40px !important; display: block; }
-  /* line 30, ../sass/modules/_navbar-canteen.scss */
+  /* line 31, ../sass/modules/_navbar-canteen.scss */
   .navbar-canteen .navbar-brand { float: left; } }
+@media (min-width: 992px) { /* line 39, ../sass/modules/_navbar-canteen.scss */
+  .navbar-canteen .nav-canteen { margin-right: 15px; } }
 
 /* line 1, ../sass/modules/_navbar-login.scss */
 .navbar-login { text-align: center; }

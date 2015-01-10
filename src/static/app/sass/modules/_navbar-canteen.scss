@@ -8,6 +8,7 @@
 
 	.nav-canteen {
 		margin-top: 10px !important;
+		margin-right: 0;
 		display: inline-block;
 	}
 
@@ -29,6 +30,14 @@
 
 		.navbar-brand {
 			float: left;
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		.nav-canteen {
+			margin-right: 15px;
 		}
 
 	}

@@ -59,7 +59,7 @@
 
                     <div class="col-sm-4 col-md-3">
 
-                        <div class="sort-form">
+                        <div class="form-sort">
 
                             <h2 id="js-sort-button">Filter</h2>
 
@@ -78,8 +78,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="unit-number">Unit #</label>
-                                        <select id="unit-number" class="form-control" name="unit-number">
+                                        <label for="incident-unit-number">Unit #</label>
+                                        <select id="incident-unit-number" class="form-control" name="incident-unit-number">
                                             <option>001</option>
                                             <option>002</option>
                                             <option>003</option>
@@ -137,8 +137,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="zipcode">Zip Code</label>
-                                        <input id="zipcode" class="form-control" name="zipcode" type="text">
+                                        <label for="incident-zipcode">Zip Code</label>
+                                        <input id="incident-zipcode" class="form-control" name="incident-zipcode" type="text">
                                     </div>
 
                                     <input class="btn btn-default" type="submit" value="Submit">
@@ -155,62 +155,62 @@
 
                         <div class="table-responsive">
 
-                            <table class="table table-stripped table-hover">
+                            <table id="js-report-table" class="table table-stripped table-hover sortable report-table">
 
                                 <thead>
-                                    <th>Date</th>
-                                    <th>Unit #</th>
-                                    <th>Type of Call</th>
-                                    <th>Zip Code</th>
+                                    <th>Date <span class="glyphicon glyphicon-chevron" aria-hidden="true"></span></th>
+                                    <th>Unit # <span class="glyphicon glyphicon-chevron" aria-hidden="true"></span></th>
+                                    <th>Type of Call <span class="glyphicon glyphicon-chevron" aria-hidden="true"></span></th>
+                                    <th>Zip Code <span class="glyphicon glyphicon-chevron" aria-hidden="true"></span></th>
                                 </thead>
 
                                 <tr>
-                                    <td>01/08/2015</td>
-                                    <td>001</td>
-                                    <td>Fire/ Alarm/ Companies</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/08/2015</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Fire/ Alarm/ Companies</a></td>
+                                    <td><a href="#">15222</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/01/2015</td>
-                                    <td>004</td>
-                                    <td>Hazmat</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/01/2015</a></td>
+                                    <td><a href="#">004</a></td>
+                                    <td><a href="#">Hazmat</a></td>
+                                    <td><a href="#">15218</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/08/2015</td>
-                                    <td>001</td>
-                                    <td>Maintenance</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/08/2015</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Maintenance</a></td>
+                                    <td><a href="#">16503</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/08/2015</td>
-                                    <td>001</td>
-                                    <td>Maintenance</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/08/2015</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Maintenance</a></td>
+                                    <td><a href="#">15222</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/08/2015</td>
-                                    <td>001</td>
-                                    <td>Flood</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/08/2015</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Flood</a></td>
+                                    <td><a href="#">15222</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/08/2015</td>
-                                    <td>001</td>
-                                    <td>Special Event</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/08/2015</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Special Event</a></td>
+                                    <td><a href="#">15123</a></td>
                                 </tr>
                                 <tr>
-                                    <td>07/30/2014</td>
-                                    <td>001</td>
-                                    <td>Fire/ Alarm/ Companies</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">07/30/2014</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Fire/ Alarm/ Companies</a></td>
+                                    <td><a href="#">16518</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01/01/2014</td>
-                                    <td>001</td>
-                                    <td>Other</td>
-                                    <td>15222</td>
+                                    <td data-dateformat="MM-DD-YYYY"><a href="#">01/01/2014</a></td>
+                                    <td><a href="#">001</a></td>
+                                    <td><a href="#">Other</a></td>
+                                    <td><a href="#">15222</a></td>
                                 </tr>
 
                             </table>
