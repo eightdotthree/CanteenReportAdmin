@@ -1,0 +1,29 @@
+.report-table {
+
+	th {
+
+		cursor: pointer;
+
+		.glyphicon {
+			font-size: 10px;
+			top: 0;
+		}
+
+		.glyphicon-chevron {
+			&:before {
+				content: '\e113';
+			}
+		}
+
+		&:hover,
+		&.sorted {
+			color: $primaryRed;
+			.glyphicon-chevron {
+				&:before {
+					content: '\e114';
+				}
+			}
+		}
+	}
+
+}
