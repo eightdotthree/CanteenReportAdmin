@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+
+        <title>Emergency Disaster Services - Canteen Report</title>
+
+        <!-- build:css(.tmp) css/main.css -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- endbuild -->
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-canteen">
+
+            <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="/">
+                        <img src="/img/logo-emergency-disaster-services.gif" alt="Brand" />
+                    </a>
+
+                </div>
+
+                <ul class="nav nav-pills nav-canteen navbar-right">
+                    <li role="presentation">
+                        <a href="/report-search.html">Reports</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/summary.html">Summary</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/login.html">Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <section>
+
+            <div class="container-fluid">
+
+                <div class="page-header page-header-canteen">
+                    <h1>Canteen Report</h1>
+                    <button class="btn btn-default btn-print glyphicon glyphicon-print">Print</button>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-md-3">
+                        <a href="/report-search.html" class="btn btn-lg btn-primary btn-block">Find a Report</a>
+                        <a href="/summary.html" class="btn btn-lg btn-primary btn-block">Create a Summary</a>
+                    </div>
+
+                    <div class="report-data-container col-sm-8 col-md-9">
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Incident</h3>
+                            </div>
+
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Report Status:</strong> <span class="label label-danger">Active</span></li>
+                                <li class="list-group-item"><strong>Report ID Number:</strong> 001</li>
+                                <li class="list-group-item"><strong>Unit Number:</strong> 001</li>
+                                <li class="list-group-item"><strong>Dispatch:</strong> 01/01/2015, 9:00am</li>
+                                <li class="list-group-item"><strong>In Route:</strong> 01/01/2015, 9:00am</li>
+                                <li class="list-group-item"><strong>On the Scene:</strong> 01/01/2015, 9:00am</li>
+                                <li class="list-group-item"><strong>Location of Incident:</strong> 123 Address Street, Pittsburgh, PA 15222</li>
+                                <li class="list-group-item"><strong>Type of Call:</strong> Fire/ Alarm/ Companies, Hazmat</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Team</h3>
+                            </div>
+
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Salvation Army - Driver:</strong> Tom Jones</li>
+                                <li class="list-group-item"><strong>Salvation Army - Team member:</strong> Tina Jones</li>
+                                <li class="list-group-item"><strong>Red Cross Refferal</strong> Tina Jones, 412-431-0000</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="page-header page-header-canteen clearfix">
+                            <button class="btn btn-default btn-print pull-right glyphicon glyphicon-print">Print</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- build:js js/main.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/bootstrap-sortable/Scripts/bootstrap-sortable.js"></script>
+        <script src="bower_components/mediaCheck/js/mediaCheck.js"></script>
+        <script src="js/canteenreport.main.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>

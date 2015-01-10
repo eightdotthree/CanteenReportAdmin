@@ -1,0 +1,11 @@
+.btn-print {
+	&:before {
+		margin-right: 5px;
+	}
+
+	@media print {
+
+		display: none;
+
+	}
+}

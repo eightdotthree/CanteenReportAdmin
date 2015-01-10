@@ -1844,15 +1844,15 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .btn-default .badge { color: #fff; background-color: #332e27; }
 
 /* line 63, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-primary { color: #fff; background-color: #4997D0; border-color: #358bcb; }
+.btn-primary { color: #332e27; background-color: #dddddd; border-color: #aaaaaa; }
 /* line 11, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { color: #fff; background-color: #2f7eb7; border-color: #286a9a; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { color: #332e27; background-color: #c4c4c4; border-color: #8b8b8b; }
 /* line 21, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { background-image: none; }
 /* line 29, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active { background-color: #4997D0; border-color: #358bcb; }
+.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active { background-color: #dddddd; border-color: #aaaaaa; }
 /* line 40, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary .badge { color: #4997D0; background-color: #fff; }
+.btn-primary .badge { color: #dddddd; background-color: #332e27; }
 
 /* line 67, ../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }
@@ -3372,6 +3372,18 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* line 1, ../sass/helpers/_common.scss */
 body { background-color: #fff; }
 
+@media print { /* line 3, ../sass/helpers/_print.scss */
+  .btn { display: none; } }
+/* line 1, ../sass/layout/_report-data-container.scss */
+.report-data-container { margin-top: 20px; }
+@media (min-width: 768px) { /* line 1, ../sass/layout/_report-data-container.scss */
+  .report-data-container { margin-top: 0; } }
+
+/* line 2, ../sass/modules/_btn-print.scss */
+.btn-print:before { margin-right: 5px; }
+@media print { /* line 1, ../sass/modules/_btn-print.scss */
+  .btn-print { display: none; } }
+
 /* line 1, ../sass/modules/_navbar-brand.scss */
 .navbar-brand { height: auto; }
 
@@ -3399,6 +3411,11 @@ body { background-color: #fff; }
 /* line 9, ../sass/modules/_navbar-login.scss */
 .navbar-login .navbar-header { float: none; }
 
+/* line 1, ../sass/modules/_page-header-canteen.scss */
+.page-header-canteen { border-bottom: none; margin-top: 0; position: relative; }
+/* line 8, ../sass/modules/_page-header-canteen.scss */
+.page-header-canteen .btn-print { position: absolute; right: 0; }
+
 /* line 3, ../sass/modules/_report-table.scss */
 .report-table th { cursor: pointer; }
 /* line 7, ../sass/modules/_report-table.scss */
@@ -3422,6 +3439,8 @@ body { background-color: #fff; }
   .form-sort h2 { cursor: default; }
   /* line 31, ../sass/modules/_form-sort.scss */
   .form-sort .sort-form-container { display: block !important; } }
+@media print { /* line 1, ../sass/modules/_form-sort.scss */
+  .form-sort { display: none; } }
 
 /* line 1, ../sass/modules/_form-signin.scss */
 .form-signin { max-width: 320px; margin: 0 auto; }

@@ -8,13 +8,17 @@
 
 @import "helpers/_mixins";
 @import "helpers/_common";
+@import "helpers/_print";
 
 // layout
+@import "layout/_report-data-container";
 
 // modules
+@import "modules/_btn-print";
 @import "modules/_navbar-brand";
 @import "modules/_navbar-canteen";
 @import "modules/_navbar-login";
+@import "modules/_page-header-canteen";
 @import "modules/_report-table";
 @import "modules/_form-sort";
 @import "modules/_form-signin";
