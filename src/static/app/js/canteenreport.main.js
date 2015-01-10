@@ -1,4 +1,6 @@
+/* global $:false */
 /* global window:false */
+/* global mediaCheck:false */
 
 var canteenreport = canteenreport || {};
 
@@ -31,15 +33,15 @@ var canteenreport = canteenreport || {};
 
 			mediaCheck({
 				media: '(min-width: 768px)',
-		  		entry: function() {
-		    		canteenreport.main.screenSize = 'large';
-		  		},
-		  		exit: function() {
-		    		canteenreport.main.screenSize = 'small';
-		  		},
-		  		both: function() {
-		    		console.log('changing state');
-		  		}
+				entry: function () {
+					canteenreport.main.screenSize = 'large';
+				},
+				exit: function () {
+					canteenreport.main.screenSize = 'small';
+				},
+				both: function () {
+					console.log('changing state');
+				}
 			});
 
 		}
@@ -49,7 +51,7 @@ var canteenreport = canteenreport || {};
 }(window.jQuery, window.Modernizr, window, window.document));
 
 
-$(function() {
+$(function () {
 
 	'use strict';
 

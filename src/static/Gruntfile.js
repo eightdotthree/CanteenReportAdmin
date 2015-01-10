@@ -17,7 +17,7 @@ var mountFolder = function (connect, dir) {
 module.exports = function (grunt) {
 
     // build a custom version of modernizr
-    grunt.loadNpmTasks('grunt-modernizr');
+    //grunt.loadNpmTasks('grunt-modernizr');
 
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -34,63 +34,63 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        modernizr: {
-            dist: {
-                // [REQUIRED] Path to the build you're using for development.
-                'devFile': 'app/bower_components/modernizr/modernizr.js',
+        // modernizr: {
+        //     dist: {
+        //         // [REQUIRED] Path to the build you're using for development.
+        //         'devFile': 'app/bower_components/modernizr/modernizr.js',
 
-                // [REQUIRED] Path to save out the built file.
-                'outputFile': 'app/js/plugins/modernizr.optimized.js',
+        //         // [REQUIRED] Path to save out the built file.
+        //         'outputFile': 'app/js/plugins/modernizr.optimized.js',
 
-                // Based on default settings on http://modernizr.com/download/
-                'extra': {
-                    'shiv': true,
-                    'printshiv': false,
-                    'load': false,
-                    'mq': true,
-                    'cssclasses': true,
-                    'css-boxsizing': true
-                },
+        //         // Based on default settings on http://modernizr.com/download/
+        //         'extra': {
+        //             'shiv': true,
+        //             'printshiv': false,
+        //             'load': false,
+        //             'mq': true,
+        //             'cssclasses': true,
+        //             'css-boxsizing': true
+        //         },
 
-                // Based on default settings on http://modernizr.com/download/
-                'extensibility': {
-                    'addtest': false,
-                    'prefixed': false,
-                    'teststyles': false,
-                    'testprops': false,
-                    'testallprops': false,
-                    'hasevents': false,
-                    'prefixes': false,
-                    'domprefixes': false
-                },
+        //         // Based on default settings on http://modernizr.com/download/
+        //         'extensibility': {
+        //             'addtest': false,
+        //             'prefixed': false,
+        //             'teststyles': false,
+        //             'testprops': false,
+        //             'testallprops': false,
+        //             'hasevents': false,
+        //             'prefixes': false,
+        //             'domprefixes': false
+        //         },
 
-                // By default, source is uglified before saving
-                'uglify': true,
+        //         // By default, source is uglified before saving
+        //         'uglify': true,
 
-                // Define any tests you want to implicitly include.
-                'tests': [],
+        //         // Define any tests you want to implicitly include.
+        //         'tests': [],
 
-                // By default, this task will crawl your project for references to Modernizr tests.
-                // Set to false to disable.
-                'parseFiles': true,
+        //         // By default, this task will crawl your project for references to Modernizr tests.
+        //         // Set to false to disable.
+        //         'parseFiles': true,
 
-                // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
-                // You can override this by defining a 'files' array below.
-                'files': {
-                    'src': [
-                        '<%= yeoman.app %>/js/**/*.js',
-                        '<%= yeoman.app %>/css/**/*.css'
-                    ]
-                },
+        //         // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
+        //         // You can override this by defining a 'files' array below.
+        //         'files': {
+        //             'src': [
+        //                 '<%= yeoman.app %>/js/**/*.js',
+        //                 '<%= yeoman.app %>/css/**/*.css'
+        //             ]
+        //         },
 
-                // When parseFiles = true, matchCommunityTests = true will attempt to
-                // match user-contributed tests.
-                'matchCommunityTests': false,
+        //         // When parseFiles = true, matchCommunityTests = true will attempt to
+        //         // match user-contributed tests.
+        //         'matchCommunityTests': false,
 
-                // Have custom Modernizr tests? Add paths to their location here.
-                'customTests': []
-            }
-        },
+        //         // Have custom Modernizr tests? Add paths to their location here.
+        //         'customTests': []
+        //     }
+        // },
         watch: {
             compass: {
                 files: [
@@ -405,7 +405,7 @@ module.exports = function (grunt) {
     // ]);
 
     grunt.registerTask('build', [
-        'modernizr:dist',
+        //'modernizr:dist',
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
