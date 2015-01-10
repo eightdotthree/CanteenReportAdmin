@@ -13,7 +13,7 @@ var canteenreport = canteenreport || {};
 		elem: {
 			$sortBtn: $('#js-sort-button'),
 			$sortContainer: $('#js-sort-container'),
-			$table: $('#js-report-table');
+			$table: $('#js-report-table')
 		},
 
 		screenSize: 'small',
