@@ -96,7 +96,7 @@ var canteenreport = canteenreport || {};
 
 		},
 
-		removeClonedObjects: function() {
+		removeClonedObjects: function () {
 
 			$(this.clonedElements).each(function (index, item) {
 				item.remove();
