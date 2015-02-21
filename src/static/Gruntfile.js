@@ -34,63 +34,6 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        // modernizr: {
-        //     dist: {
-        //         // [REQUIRED] Path to the build you're using for development.
-        //         'devFile': 'app/bower_components/modernizr/modernizr.js',
-
-        //         // [REQUIRED] Path to save out the built file.
-        //         'outputFile': 'app/js/plugins/modernizr.optimized.js',
-
-        //         // Based on default settings on http://modernizr.com/download/
-        //         'extra': {
-        //             'shiv': true,
-        //             'printshiv': false,
-        //             'load': false,
-        //             'mq': true,
-        //             'cssclasses': true,
-        //             'css-boxsizing': true
-        //         },
-
-        //         // Based on default settings on http://modernizr.com/download/
-        //         'extensibility': {
-        //             'addtest': false,
-        //             'prefixed': false,
-        //             'teststyles': false,
-        //             'testprops': false,
-        //             'testallprops': false,
-        //             'hasevents': false,
-        //             'prefixes': false,
-        //             'domprefixes': false
-        //         },
-
-        //         // By default, source is uglified before saving
-        //         'uglify': true,
-
-        //         // Define any tests you want to implicitly include.
-        //         'tests': [],
-
-        //         // By default, this task will crawl your project for references to Modernizr tests.
-        //         // Set to false to disable.
-        //         'parseFiles': true,
-
-        //         // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
-        //         // You can override this by defining a 'files' array below.
-        //         'files': {
-        //             'src': [
-        //                 '<%= yeoman.app %>/js/**/*.js',
-        //                 '<%= yeoman.app %>/css/**/*.css'
-        //             ]
-        //         },
-
-        //         // When parseFiles = true, matchCommunityTests = true will attempt to
-        //         // match user-contributed tests.
-        //         'matchCommunityTests': false,
-
-        //         // Have custom Modernizr tests? Add paths to their location here.
-        //         'customTests': []
-        //     }
-        // },
         watch: {
             compass: {
                 files: [
@@ -207,11 +150,11 @@ module.exports = function (grunt) {
                 //generatedImagesPath: '/img/generated',
                 imagesDir: '<%= yeoman.app %>/img',
                 //javascriptsDir: '<%= yeoman.app %>/js',
-                //fontsDir: '<%= yeoman.app %>/sass/fonts',
-                //importPath: '<%= yeoman.app %>/bower_components',
+                fontsDir: '<%= yeoman.app %>/fonts',
+                importPath: '<%= yeoman.app %>/bower_components',
                 //httpImagesPath: '<%= yeoman.app %>/img',
                 httpGeneratedImagesPath: '../img/generated', // http://stackoverflow.com/questions/17448749/compass-grunt-contrib-compass-sprites-paths-problems
-                //httpFontsPath: '/sass/fonts',
+                httpFontsPath: '/fonts',
                 relativeAssets: false,
                 outputStyle: 'compact',
                 debugInfo: false
@@ -225,7 +168,7 @@ module.exports = function (grunt) {
             },
             server: {
                 options: {
-                    debugInfo: false
+                    debugInfo: true
                 }
             }
         },
@@ -325,21 +268,8 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'img/{,*/}*.{webp,gif}',
                         'css/{,*/}*.{jpg,gif,png,webp}',
-                        'css/fonts/*',
-                        'modules/*'
+                        'fonts/{,*/}*.{eot,svg,ttf,woff}'
                     ]
-                }, {
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>/js/angular',
-                    dest: '<%= yeoman.dist %>/js/angular',
-                    src: ['*']
-                }, {
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>/sass/icomoon/fonts',
-                    dest: '<%= yeoman.dist %>/css/fonts',
-                    src: ['*']
                 }]
             },
             deploy: {
@@ -381,7 +311,6 @@ module.exports = function (grunt) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
         }
-
         grunt.task.run([
             'clean:server',
             'concurrent:server',
